@@ -1,19 +1,20 @@
-/* write a function named allFromTown which takes a parameters with registration numbers */
-function allFromTown(regNumbers, loc){
-    /* Separate the string using a comma */
-      var regNumbers_Array= regNumbers.split(",");
-      //console.log(regNumbers_Array);
-    var allFromTown_regNumbers = [];
-    /* Create a for loop function to set the conddition */ 
-        for ( var i = 0; i <regNumbers_Array.length; i++){
-    /* Use the trim function to remove any spaces in the array, by creating new variable*/
-          var numPlates = regNumbers_Array[i].trim();
-          if (numPlates.startsWith(loc)){
-          //console.log(numPlates)
-          allFromTown_regNumbers.push(numPlates);
-          }
-        }
-    /* The function must return all registration numbers */	
-          return allFromTown_regNumbers;
+// Write function called countAllFromTown which takes two paramters. 
+function countAllFromTown(par1, par2){
+  // Declare a variable called regNumbers which will be separated by a comma.
+    var regNumb =  par1.split(",");
+  //  console.log(regNumb);
+  // Declare a variable called fromStellies with an empty array 
+    var fromStellies = [];
+  // Give a conditional statement using (for loops).
+    for (var i = 0; i <regNumb.length; i++){
+  // Declare new variable called allRegNumbers to remove any spaces in the string using trim
+      var allRegNumbers = regNumb[i].trim();
+  //    console.log(allRegNumbers);
+  // Using an if statement to help us get all number plates from a particular location 
+       if (allRegNumbers.startsWith(par2)){
+      fromStellies.push(allRegNumbers);
+       }
     }
-    
+  // The fucntion must return the registration number in the string that is for that town.
+   return fromStellies.length;
+  }
