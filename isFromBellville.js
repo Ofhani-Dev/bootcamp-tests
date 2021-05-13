@@ -1,6 +1,6 @@
 function isFromBellville(numberPlate){
 	if (numberPlate.startsWith("CY"))
-      return true;
+            return true;
 	else
-      return false;
+            return false;
 }
